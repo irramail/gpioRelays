@@ -7,6 +7,7 @@ for id in $gpioPins
 do
   echo "$id" > /sys/class/gpio/export
   echo "out" > /sys/class/gpio/gpio$id/direction
+  echo "1" > /sys/class/gpio/gpio$id/value
 done
 
 /home/uid0001/scripts/rele.sh
