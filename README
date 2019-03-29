@@ -1,0 +1,3 @@
+Test
+
+while :; do for id in 7 8 9 10 11 17 22 27; do redis-cli -h 192.168.9.9 set gpio$id 1; redis-cli -h 192.168.9.9 set changedGpio yes; sleep 3; redis-cli -h 192.168.9.9 set gpio$id 0; redis-cli -h 192.168.9.9 set changedGpio yes; sleep 3; done; done
